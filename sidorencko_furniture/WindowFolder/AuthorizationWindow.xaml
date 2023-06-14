@@ -1,0 +1,49 @@
+﻿<Window x:Class="sidorencko_furniture.WindowFolder.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:sidorencko_furniture.WindowFolder"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="450" Width="410" x:Name="AuthWnd"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" 
+        Icon="/sidorencko_furniture;component/ResourceFolder/icon.jpg"
+        KeyDown="AuthWnd_KeyDown">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition />
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Label Content="Авторизация" 
+               Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
+               Style="{DynamicResource LabelLogo}"/>
+        <Label Content="Логин" 
+               Grid.Row="3" Grid.Column="1" 
+               Style="{DynamicResource NormalLabel}"/>
+        <TextBox x:Name="LoginTB" 
+               Grid.Row="3" Grid.Column="2"/>
+        <Label Content="Пароль" 
+               Grid.Row="5" Grid.Column="1" 
+               Style="{DynamicResource NormalLabel}"/>
+        <PasswordBox x:Name="PasswordPB" 
+               Grid.Row="5" Grid.Column="2"/>
+        <Button x:Name="Login" Content="Войти" 
+               Grid.Column="1" 
+               Grid.Row="7" 
+               Grid.ColumnSpan="2"
+               Click="Login_Click"/>
+    </Grid>
+</Window>
